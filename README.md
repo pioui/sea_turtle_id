@@ -20,25 +20,10 @@ Tools: PyTorch is an open source machine learning library based on the Torch lib
 Database
 For the data, part of the database (9 individuals) of Kostantinos Papafitsouros [5] who has a wide sorted collection (over 1000 individuals) of loggerhead turtle photos was provided. From 400 to 1000 photos are available for each person.
 
-### Building a neural network for caret recognition with random image selection
-
-First, the data was organized into addresses.
-  data/train/tXXX for training
-  data/val/tXXX for evaluation
-Where tXXX is the folder with the photos of each turtle.
-Images for evaluation were selected by randomly selecting one-tenth of the total images for each turtle.
-
-The neural network was then trained in two ways
-Initialization of the parameters with a pre-trained network (Finetuning): Instead of a random initialization, the network is initialized with a pre-trained network like that of imagenet which has more than 1000 objects.
-Convolutional neural network as a fixed feature extractor: Here a pre-trained network is used unchanged except for the last fully connected layer. This last layer is initialized with one with random weights and is the only one that is trained.
-The execution of this step was done with the python file ``` makeNdatasets.py```, ```turtles_train_ft.py``` and ```turtles_train_conv.py``` after first making the train and val folders. The results are summarized in Table:
-
-
-Finetuning convnet accuracy | Fixed feature extractor accuracy
-----|----
-0.95452 | 0.761686
 
 ### Building a neural network for caret recognition with random shots
+
+Develop and train a ResNet18-based deep learning model specifically designed for accurate photo identification of sea turtles. This project aims to explore the power of ResNet18 architecture to achieve the recognition capabilities, enabling precise identification and classification of sea turtle species from photographic data. The trained model will be a valuable tool for conservation efforts, aiding researchers and environmentalists in monitoring and protecting sea turtle populations through efficient and reliable photo identification techniques.
 
 First, the data was organized into addresses.
   data/train/tXXX/sk for training
