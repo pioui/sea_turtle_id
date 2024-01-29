@@ -49,7 +49,7 @@ By shooting we mean the set of photos that were taken in the same location at th
 Then the neural network was trained in both ways as before by choosing 5 different combinations of train and val.
 Initialization of parameters with pre-trained network (Finetuning).
 Convolutional neural network as a fixed feature extractor.
-The execution of this step was done with the python file “makeNdatasets.py” where first the train and val folders are made and then the training is done as before by calling the files “turtles_train_ft.py” and “turtles_train_conv.py”. The results are summarized in Table:
+The execution of this step was done with the python file ```makeNdatasets.py``` where first the train and val folders are made and then the training is done as before by calling the files ```turtles_train_ft.py``` and ```turtles_train_conv.py```. The results are summarized in Table:
 
 Random shots dataset | Finetuning convnet accuracy |Fixed feature extractor accuracy
 ----|----|----
